@@ -1,0 +1,16 @@
+[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+runner = "probe-run --chip STM32L051K6Tx"
+rustflags = [
+  # LLD (shipped with the Rust toolchain) is used as the default linker
+  "-C", "link-arg=-Tlink.x",
+
+  # if you run into problems with LLD switch to the GNU linker by commenting out
+  # this line
+  # "-C", "linker=arm-none-eabi-ld",
+
+
+]
+
+[build]
+target = "thumbv6m-none-eabi"    # Cortex-M0 and Cortex-M0+
+
