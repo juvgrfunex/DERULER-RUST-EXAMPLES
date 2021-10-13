@@ -6,7 +6,11 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-stm32l0xx-hal = { version = "0.7.0", features = [ "mcu-STM32L051K6Tx", "rt"] }
+stm32l0xx-hal = { version = "0.7.0", features = [ "mcu-STM32L051K6Tx", "rt", "disable-linker-script"] }
 panic-halt = "*"
 cortex-m-rt = "*"
 cortex-m = "*"
+
+# rtt
+rtt-target = {version = "0.3.0", features = ["cortex-m"]}
+panic-rtt-target = { version = "0.1.2", features = ["cortex-m"] }
