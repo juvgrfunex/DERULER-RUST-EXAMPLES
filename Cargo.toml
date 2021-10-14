@@ -3,5 +3,6 @@ members = [
     "blinky",
     "rtt",
     "rtt_format",
-    "ported"
+    "ported",
+    "ported_int"
 ]

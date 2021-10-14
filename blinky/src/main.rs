@@ -25,9 +25,7 @@ fn main() -> ! {
     // Get the delay provider.
     let mut delay = cp.SYST.delay(rcc.clocks);
 
-
     loop {
-
         led_red.set_high().unwrap();
         led_green.set_high().unwrap();
         led_blue.set_high().unwrap();
@@ -37,6 +35,5 @@ fn main() -> ! {
         led_green.set_low().unwrap();
         led_blue.set_low().unwrap();
         delay.delay_ms(1000_u16);
-
     }
 }

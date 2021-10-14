@@ -1,8 +1,8 @@
 #![no_main]
 #![no_std]
 
-extern crate panic_halt;
 use cortex_m_rt::entry;
+use panic_halt as _;
 use stm32l0xx_hal::{pac, prelude::*, rcc::Config};
 
 #[entry]
