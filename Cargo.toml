@@ -4,5 +4,6 @@ members = [
     "rtt",
     "rtt_format",
     "ported",
-    "ported_int"
+    "ported_int",
+    "led_pwm"
 ]
