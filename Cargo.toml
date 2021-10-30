@@ -1,4 +1,5 @@
 [workspace]
+resolver = "2"
 members = [
     "blinky",
     "rtt",
@@ -6,5 +7,9 @@ members = [
     "ported",
     "ported_int",
     "led_pwm",
-    "heap"
+    "heap",
+    "buzzer",
+    "i2c_ssd1306"
 ]
+[profile.dev]
+opt-level = 1
