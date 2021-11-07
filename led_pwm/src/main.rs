@@ -32,7 +32,7 @@ fn main() -> ! {
     // Pin PA0, channel 1 for green led
     // Pin PA1, channel 2 for red led
     // PIN PA2, channel 3 for blue led
-    let mut pwm = pwm::Timer::new(dp.TIM2, 10.khz(), &mut rcc)
+    let mut pwm = pwm::Timer::new(dp.TIM2, 10_000.Hz(), &mut rcc)
         .channel1
         .assign(gpioa.pa0);
 
