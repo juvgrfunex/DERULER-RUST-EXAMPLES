@@ -4,13 +4,13 @@
 
 extern crate alloc;
 
+use alloc::boxed::Box;
+use alloc::vec;
+use alloc_cortex_m::CortexMHeap;
+use core::alloc::Layout;
 use panic_rtt_target as _;
 use rtt_target::{rprintln, rtt_init_print};
 use stm32l0xx_hal as _;
-use alloc_cortex_m::CortexMHeap;
-use alloc::boxed::Box;
-use alloc::vec;
-use core::alloc::Layout;
 
 #[global_allocator]
 static ALLOCATOR: CortexMHeap = CortexMHeap::empty();
@@ -28,8 +28,7 @@ fn main() -> ! {
 
     // try to allocate 1024 bytes on the heap
     // this will fail because there is not enough free memory
-    let _too_large_vec = vec!([0u8; 1024]);
-
+    let _too_large_vec = vec![[0u8; 1024]];
 
     unreachable!();
 }
@@ -37,6 +36,6 @@ fn main() -> ! {
 #[alloc_error_handler]
 fn oom(layout: Layout) -> ! {
     rprintln!("Out of Memory Error");
-    rprintln!("{:?}",layout);
+    rprintln!("{:?}", layout);
     loop {}
 }

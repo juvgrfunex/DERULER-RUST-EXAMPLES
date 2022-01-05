@@ -8,8 +8,9 @@ members = [
     "ported_int",
     "led_pwm",
     "heap",
-    "buzzer",
-    "i2c_ssd1306"
+    "i2c_ssd1306",
+    "serial_control",
+    "serial_loopback",
 ]
 [profile.dev]
 opt-level = 1

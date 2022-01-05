@@ -8,7 +8,7 @@ use embedded_graphics::{
     prelude::*,
 };
 use panic_rtt_target as _;
-use rtt_target::{rprintln, rtt_init_print};
+use rtt_target::{rtt_init_print};
 use ssd1306::{prelude::*, I2CDisplayInterface, Ssd1306};
 use stm32l0xx_hal::{pac, prelude::*, rcc::Config};
 
