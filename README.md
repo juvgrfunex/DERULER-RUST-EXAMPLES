@@ -1,5 +1,6 @@
-Rust Examples for the DERULER project 
+Rust Examples for the DERULER project
 
+https://www.deruler.com/
 
 ## Quickstart
 Install Rust:
